@@ -1,0 +1,25 @@
+hello
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="document" id="document" required="required">
+
+    <p id="attributeid">attribute id</p>
+    <input type="text" name="attributeid" id="attributeid" required="required">
+
+
+
+    <br>
+    <button id="submit">upload</button>
+</form>
+
+
+
+
+
+{% block messages %}
+{% if messages %}
+{% for m in messages %}
+{{m}}
+{%endfor%}
+{% endif %}
+{% endblock %}
